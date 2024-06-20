@@ -8,10 +8,10 @@ include package.json
 include *.rst
 graft django
 prune django/contrib/admin/bin
+prune tests
 graft docs
 graft extras
 graft js_tests
 graft scripts
-graft tests
 global-exclude __pycache__
 global-exclude *.py[co]
