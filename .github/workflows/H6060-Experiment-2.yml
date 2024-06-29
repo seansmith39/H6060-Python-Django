@@ -97,13 +97,13 @@ jobs:
           build-directory: dist
 
       - name: Run Tests
-        if: "${{ github.event.inputs.sast-deepsource-enabled == 'true' }}"
+        if: ${{ inputs.sast-deepsource-enabled == true }}
         run: |
           coverage run ./tests/runtests.py --settings=test_sqlite --parallel=2
           coverage xml
 
       - name: Upload Coverage XML Report
-        if: "${{ github.event.inputs.sast-deepsource-enabled == 'true' }}"
+        if: ${{ inputs.sast-deepsource-enabled == true }}
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
