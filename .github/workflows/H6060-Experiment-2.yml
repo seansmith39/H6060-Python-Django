@@ -136,3 +136,4 @@ jobs:
       sca-file-to-scan: requirements.txt
       eclipse-steady-workspace-token: 76C3D60F308F86C81008F6131DAB245D
       eclipse-steady-project-source-directories: django
+      build-directory: dist
